@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<!-- HEADER -->
+  <header>
+    <h1 class="header-greeting">Welcome!</h1>
+    <h2 class="header-motto">Let's play! Have a good fun!</h2>
+  </header>
+
+  <main>
+    <!-- OVERLAY INPUT FIELD -->
+    <aside class="overlay-input-field">
+      <h2 class="overlay-title">Choose your name</h2>
+      <form>
+        <div class="input-field-container">
+          <label for="playername">Player name</label>
+          <input type="text" name="playername" id="playername">
+        </div>
+        <div class="overlay-btn-container">
+          <button type="button">Cancel</button>
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+    </aside>
+    <!-- GAME CONFIGURATION -->
+    <section class="game-configuration">
+      <ol class="players-data">
+        <li>
+          <article>
+            <h3 class="players-name-label">Player 1</h3>
+            <p class="players-name">PLAYER NAME</p>
+            <p class="player-symbol">X</p>
+            <button class="player-name-edit-button">edit</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3 class="players-name-label">Player 2</h3>
+            <p class="players-name">PLAYER NAME</p>
+            <p class="player-symbol">O</p>
+            <button class="player-name-edit-btn">edit</button>
+          </article>
+        </li>
+      </ol>
+      <button class="start-game-btn">Start New Game</button>
+    </section>
+    <!-- ACTIVE GAME FIELD -->
+    <section class="game-play-field">
+      <!-- GAME END INFO FIELD -->
+      <article class="game-end-info">
+        <h3 class="winner-text">You Won, <span class="winner-name">PLAYER NAME</span></h3>
+        <p class="new-game-text">Click the Start New Game to game a new turn.</p>
+      </article>
+      <!-- GAME FILED -->
+      <p class="display-active player">It's your turn <span class="active-player-name">PLAYER NAME</span></p>
+      <ol class="game-filed-container-list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+        
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
