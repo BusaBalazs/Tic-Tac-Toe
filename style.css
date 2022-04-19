@@ -1,0 +1,235 @@
+/* ---------------------------------------------------------
+CSS RESET ------------------------------------*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+BASIC STYLE ------------------------------------*/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #0d1321, #1d2d44);
+  font-family: "lato", sans-serif;
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+MAIN HEADER ------------------------------------*/
+
+.main-header {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 2rem;
+  background-color: #5c4d7d;
+  color: rgb(231, 231, 231);
+  box-shadow: 0 2px 25px #b498f163 inset;
+}
+
+.header-greeting {
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: .8em 0 .2em 0;
+}
+
+/* Bigger Screen */
+
+@media (min-width: 48rem) {
+
+  .main-header {
+    padding: 2em;
+  }
+  
+  .header-greeting {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+BACKDROP ------------------------------------*/
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1622339d;
+  display: none;
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+OVERLAY INPUT FIELD ------------------------------------*/
+
+.overlay-input-field {
+  width: 90%;
+  position: fixed;
+  top: 20rem;
+  left: 5%;
+  text-align: center;
+  padding: 1em;
+  background-color: #f5f3f4;
+  border-radius: 10px;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.4), 
+  0 2px 25px #22222248 inset;
+  display: none;
+}
+
+.overlay-title {
+  margin-bottom: 1em;
+}
+
+.overlay-input-field label {
+  display: block;
+  font-size: 1.2rem;
+  margin: .3em 0;
+}
+
+.input-field-container input {
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #1d2d44;
+  color: rgb(231, 231, 231);
+  border-radius: 4px;
+}
+
+button {
+  font-size: 1rem;
+  margin: .5em .5em 0 .5em;
+  padding: .6em 1.8em;
+  font-family: inherit;
+  background-color: transparent;
+  color: #5c4d7d;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  background-color: #aea5c2;
+}
+
+.btn {
+  background-color: #5c4d7d;
+  color: rgb(231, 231, 231);
+  transition: all .3s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #413364;
+}
+
+/* Bigger Screen */
+
+@media (min-width: 48rem) {
+  
+  .overlay-input-field {
+    width: 40rem;
+    left: calc(50% - 20rem);
+    padding: 2em;
+  }
+
+  .input-field-container input {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    margin: 1em 1em 0 1em;
+  }
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+GAME CONFIGURATION ------------------------------------*/
+
+.game-configuration {
+  max-width: 48rem;
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(231, 231, 231);
+}
+
+.players-data {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+.players-data li {
+  padding: 1em;
+  box-shadow: 3px 3px 25px rgba(10, 5, 24, 0.4);
+  border: 2px solid #5c4d7d;
+  border-radius: 4px;
+}
+
+.players-name-label {
+  font-size: clamp(1rem, 5vw, 1.4rem);
+  margin-bottom: .5em;
+}
+
+.players-name {
+  color: #5c4d7d;
+  margin-bottom: .5em;
+}
+
+.player-symbol {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.player-name-edit-btn {
+  font-size: 1.3rem;
+}
+
+/* Very Small Screen */
+
+@media (max-width: 22rem) {
+
+  .game-configuration {
+    font-size: 1rem;
+  }
+
+  .players-data li {
+    padding: 1em 0;
+  }
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------
+ACTIVE GAME FIELD ------------------------------------*/

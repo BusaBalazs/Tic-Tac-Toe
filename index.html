@@ -4,29 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
   <title>Tic-Tac-Toe</title>
+  <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
+  <!-- JavaScript Link -->
   <script src="./app.js" defer></script>
 </head>
 <body>
-<!-- HEADER -->
-  <header>
+  <!-- BACKDROP -->
+  <div id="backdrop"></div>
+  <!-- MAIN HEADER -->
+  <header class="main-header">
     <h1 class="header-greeting">Welcome!</h1>
     <h2 class="header-motto">Let's play! Have a good fun!</h2>
   </header>
-
   <main>
     <!-- OVERLAY INPUT FIELD -->
     <aside class="overlay-input-field">
-      <h2 class="overlay-title">Choose your name</h2>
+      <h2 class="overlay-title">Choose your name!</h2>
       <form>
         <div class="input-field-container">
-          <label for="playername">Player name</label>
+          <label for="playername">Player name:</label>
           <input type="text" name="playername" id="playername">
         </div>
         <div class="overlay-btn-container">
           <button type="button">Cancel</button>
-          <button type="submit">Confirm</button>
+          <button class="btn" type="submit">Confirm</button>
         </div>
       </form>
     </aside>
@@ -38,7 +45,7 @@
             <h3 class="players-name-label">Player 1</h3>
             <p class="players-name">PLAYER NAME</p>
             <p class="player-symbol">X</p>
-            <button class="player-name-edit-button">edit</button>
+            <button class="player-name-edit-btn">Edit</button>
           </article>
         </li>
         <li>
@@ -46,11 +53,11 @@
             <h3 class="players-name-label">Player 2</h3>
             <p class="players-name">PLAYER NAME</p>
             <p class="player-symbol">O</p>
-            <button class="player-name-edit-btn">edit</button>
+            <button class="player-name-edit-btn">Edit</button>
           </article>
         </li>
       </ol>
-      <button class="start-game-btn">Start New Game</button>
+      <button class="btn">Start New Game</button>
     </section>
     <!-- ACTIVE GAME FIELD -->
     <section class="game-play-field">
