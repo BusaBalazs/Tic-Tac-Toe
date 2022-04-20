@@ -20,10 +20,19 @@ CSS RESET ------------------------------------*/
 BASIC STYLE ------------------------------------*/
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(to bottom, #0d1321, #1d2d44);
   font-family: "lato", sans-serif;
+}
+
+/* Bigger Screen */
+
+@media (min-height: 53.125rem) {
+
+  body {
+    height: 100vh; /* this is because of the gradient background repeat problem */
+  }
 }
 
 
@@ -126,7 +135,7 @@ button {
   padding: .6em 1.8em;
   font-family: inherit;
   background-color: transparent;
-  color: #5c4d7d;
+  color: #997fd3;;
   border-radius: 10px;
   cursor: pointer;
   transition: all .3s ease-in-out;
@@ -201,12 +210,15 @@ GAME CONFIGURATION ------------------------------------*/
 }
 
 .players-name {
-  color: #5c4d7d;
+  color: #997fd3;;
   margin-bottom: .5em;
 }
 
 .player-symbol {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgb(119, 9, 123);
+  text-shadow: 2px 2px 25px rgba(194, 119, 255, 0.885);
 }
 
 .player-name-edit-btn {
@@ -233,3 +245,83 @@ GAME CONFIGURATION ------------------------------------*/
 
 /* ---------------------------------------------------------
 ACTIVE GAME FIELD ------------------------------------*/
+
+/* Game End Info */
+.game-play-field {
+  width: 90%;
+  max-width: 48rem;
+  text-align: center;
+  margin: 2em auto;
+}
+
+.game-end-info {
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  padding: 1em;
+  background-color: #5c4d7d;
+  color: rgb(231, 231, 231);
+  box-shadow: 0 2px 25px #b498f163 inset;
+  border-radius: 6px;
+  box-shadow: 3px 3px 25px rgba(10, 5, 24, 0.4);
+  display: none;
+}
+
+.game-end-info h3 {
+  margin-bottom: 1em;
+}
+
+.winner-name {
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
+}
+
+.new-game-text {
+  font-size: clamp(.8rem, 5vw, 1rem);
+}
+
+/* Game Field */
+.display-active-player {
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  margin: 3rem 0 2rem 0;
+  color: rgb(231, 231, 231);
+}
+
+.active-player-name {
+  color: #997fd3;
+}
+
+.game-filed-container-list {
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+  grid-template-rows: repeat(3, 6rem);
+  justify-content: center;
+  gap: .5em;
+}
+
+/* Very Small Screen */
+@media (max-width: 300px) {
+  
+  .game-filed-container-list {
+    grid-template-columns: repeat(3, 4rem);
+    grid-template-rows: repeat(3, 4rem);
+  }
+}
+
+.game-filed-container-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgb(231, 231, 231);
+  background-color: #5c4d7d;
+  text-shadow: 2px 2px 15px rgba(194, 119, 255, 0.885);
+  -webkit-text-stroke: 1px rgb(119, 9, 123);
+  cursor: pointer;
+}
+
+.game-filed-container-list li:hover {
+  background-color: #3a2467;
+}
+
+.disable {
+  background-color: #3a2467 !important;  /* if the field has been already clicked, add the darker BG color as default! */
+}
