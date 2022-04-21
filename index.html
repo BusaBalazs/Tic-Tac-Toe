@@ -31,11 +31,11 @@
       <form autocomplete="off">
         <div class="input-field-container">
           <label for="playername">Player name:</label>
-          <input type="text" name="playername" id="playername" required>
+          <input type="text" name="playername" id="playername" value="" required>
         </div>
         <p id="errors-output"></p>
         <div class="overlay-btn-container">
-          <button type="button" id="cancel-btn">Cancel</button>
+          <button type="reset" id="cancel-btn">Cancel</button>
           <button class="btn" type="submit">Confirm</button>
         </div>
       </form>
@@ -44,19 +44,19 @@
     <section class="game-configuration">
       <ol class="players-data">
         <li>
-          <article>
-            <h3 class="players-name-label">Player 1</h3>
-            <p class="players-name">PLAYER NAME</p>
+          <article id="player-1-data">
+            <p class="players-name-label">Player 1</p>
+            <h3 class="players-name">PLAYER NAME</h3>
             <p class="player-symbol">X</p>
-            <button class="player-name-edit-btn" id="edit-player-1-btn">Edit</button>
+            <button class="player-name-edit-btn" id="edit-player-1-btn" data-playerid="1">Edit</button>
           </article>
         </li>
         <li>
-          <article>
-            <h3 class="players-name-label">Player 2</h3>
-            <p class="players-name">PLAYER NAME</p>
+          <article id="player-2-data">
+            <p class="players-name-label">Player 2</p>
+            <h3 class="players-name">PLAYER NAME</h3>
             <p class="player-symbol">O</p>
-            <button class="player-name-edit-btn" id="edit-player-2-btn">Edit</button>
+            <button class="player-name-edit-btn" id="edit-player-2-btn" data-playerid="2">Edit</button>
           </article>
         </li>
       </ol>

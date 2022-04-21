@@ -1,4 +1,10 @@
 //------------------------------------------------------------------------------------------
+//VARIABELS
+//------------------------------------------------------------------------------------------
+
+let editedPlayerId;
+
+//------------------------------------------------------------------------------------------
 //SELECT ELEMENTS
 //------------------------------------------------------------------------------------------
 const backdropElement = document.getElementById("backdrop");
@@ -16,8 +22,8 @@ const cancelOverlayBtn = document.getElementById("cancel-btn");
 //EVENT LISTENER
 //------------------------------------------------------------------------------------------
 // **** OPEN OVERLAY FIELD ****
-editPlayerOneBtn.addEventListener("click", openOverlayInput);
-editPlayerTwoBtn.addEventListener("click", openOverlayInput);
+editPlayerOneBtn.addEventListener("click", editBtn);
+editPlayerTwoBtn.addEventListener("click", editBtn);
 
 // **** CLOSE OVERLAY FIELD ****
 cancelOverlayBtn.addEventListener("click", closeOverlayInput);
