@@ -4,6 +4,11 @@
 
 let editedPlayerId; // Store which player editing
 let activePlayer = 0;
+const gameData = [ // this array represent the game field list tag <li>
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
 const players = [
   {
     name: "",
