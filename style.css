@@ -156,7 +156,7 @@ button:hover {
   text-shadow: 2px 2px 25px rgba(194, 119, 255, 0.885);
 }
 
-/* Button With Bg */ 
+/* Button With Background */ 
 .btn {
   background-color: #5c4d7d;
   color: rgb(231, 231, 231);
@@ -199,7 +199,7 @@ GAME CONFIGURATION ------------------------------------*/
   max-width: 48rem;
   font-size: clamp(1.2rem, 5vw, 1.6rem);
   text-align: center;
-  margin: 0 auto;
+  margin: 2em auto;
   color: rgb(231, 231, 231);
 }
 
@@ -238,6 +238,14 @@ GAME CONFIGURATION ------------------------------------*/
   font-size: 1.3rem;
 }
 
+.start-btn {
+  width: 8.5em;
+  height: 8.5em;
+  padding: 0;
+  border-radius: 100px;
+  box-shadow: 2px 2px 35px rgba(193, 118, 255, 0.3);
+}
+
 /* Very Small Screen */
 
 @media (max-width: 22rem) {
@@ -265,6 +273,15 @@ ACTIVE GAME FIELD ------------------------------------*/
   max-width: 48rem;
   text-align: center;
   margin: 2em auto;
+  opacity: 0;
+  transform: translateY(15%);
+  transition: all .4s ease-out;
+  display: none; /* change the value with javaScript */
+}
+
+.game-play-field.show { /* add this class by javaScript to start transition */
+  opacity: 1;
+  transform: translateY(0); 
 }
 
 .game-end-info {
@@ -292,8 +309,9 @@ ACTIVE GAME FIELD ------------------------------------*/
 
 /* Game Field */
 .display-active-player {
-  font-size: clamp(1rem, 5vw, 1.3rem);
-  margin: 3rem 0 2rem 0;
+  font-size: clamp(1rem, 5vw, 1.4rem);
+  margin: 1rem 0 2rem 0;
+  text-transform: capitalize;
   color: rgb(231, 231, 231);
 }
 
@@ -335,6 +353,7 @@ ACTIVE GAME FIELD ------------------------------------*/
   background-color: #3a2467;
 }
 
-.disable {
+.game-filed-container-list li.disable {
   background-color: #3a2467 !important;  /* if the field has been already clicked, add the darker BG color as default! */
+  cursor: default;
 }

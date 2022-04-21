@@ -40,6 +40,7 @@ const savePlayerConfig = event => {
   const editPlayerName = document.getElementById(`player-${editedPlayerId}-data`); //with the editedPlayerId variable changes the selection of which name of players should be replace 
   editPlayerName.children[1].textContent = enteredPlayerName;
 
+  players[editedPlayerId - 1].name = enteredPlayerName;
   closeOverlayInput(); //when click submit that function will close automaticly 
   resetInputValue();
 }
