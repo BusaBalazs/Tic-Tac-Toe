@@ -199,7 +199,7 @@ GAME CONFIGURATION ------------------------------------*/
   max-width: 48rem;
   font-size: clamp(1.2rem, 5vw, 1.6rem);
   text-align: center;
-  margin: 2em auto;
+  margin: 2em auto 1em auto;
   color: rgb(231, 231, 231);
 }
 
@@ -243,7 +243,7 @@ GAME CONFIGURATION ------------------------------------*/
   height: 8.5em;
   padding: 0;
   border-radius: 100px;
-  box-shadow: 2px 2px 35px rgba(193, 118, 255, 0.3);
+  box-shadow: 2px 2px 35px rgba(193, 118, 255, 0.25);
 }
 
 /* Very Small Screen */
@@ -273,6 +273,7 @@ ACTIVE GAME FIELD ------------------------------------*/
   max-width: 48rem;
   text-align: center;
   margin: 2em auto;
+  padding-bottom: 3em;
   opacity: 0;
   transform: translateY(15%);
   transition: all .4s ease-out;
@@ -286,13 +287,14 @@ ACTIVE GAME FIELD ------------------------------------*/
 
 .game-end-info {
   font-size: clamp(1rem, 5vw, 1.3rem);
+  text-transform: capitalize;
   padding: 1em;
   background-color: #5c4d7d;
   color: rgb(231, 231, 231);
   box-shadow: 0 2px 25px #b498f163 inset;
   border-radius: 6px;
   box-shadow: 3px 3px 25px rgba(10, 5, 24, 0.4);
-  display: none;
+  display: none; /* change the value with javaScript */
 }
 
 .game-end-info h3 {

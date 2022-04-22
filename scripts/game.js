@@ -15,6 +15,18 @@ const startNewGame = () => {
     element.classList.remove("disable");
   };
   activePlayerName.textContent = players[0].name;
+
+  // Reset gameData
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      gameData[i][j] = 0;
+    }
+  }
+  //Reset displayWinner
+  displayWinner.style.display = "none";
+
+  //Reset activePlayer
+  activePlayer = 0;
 }
 
 //------------------------------------------------------------------------------------------
@@ -40,8 +52,15 @@ const selectGameField = event => {
 
   gameData[actualRow][actualCol] = activePlayer + 1; // increase by 1 the activePlayer hence we got player 1 and player 2
   const winner = gameEnd();
-  console.log(winner);
+  if (winner === 1) {
+    displayWinner.style.display = "block";
+    displayWinner.firstElementChild.firstElementChild.textContent = players[0].name;
+  }else if (winner === 2) {
+    displayWinner.style.display = "block";
+    displayWinner.firstElementChild.firstElementChild.textContent = players[1].name;
+  }
   switchPlayer();
+  console.log(gameData);
 }
 
 // **** GAME END *****
@@ -62,7 +81,7 @@ const gameEnd = () => {
       if (
         gameData[0][i] > 0 &&
         gameData[0][i] === gameData[1][i] &&
-        gameData[1][0] === gameData[2][i]
+        gameData[1][i] === gameData[2][i]
       ) {
         return gameData[0][i]
       }
