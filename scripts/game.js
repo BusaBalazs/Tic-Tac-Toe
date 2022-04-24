@@ -44,6 +44,7 @@ const selectGameField = event => {
   //Determine which game field element <li> was clicked by players
   const actualCol = actualField.dataset.col - 1;
   const actualRow = actualField.dataset.row - 1;
+  //if the field has been already clicked the remain rows of the code won't run so you can't click once more
   if (gameData[actualRow][actualCol] > 0) {
     return;
   }
